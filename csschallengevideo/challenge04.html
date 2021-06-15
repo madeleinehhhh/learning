@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color:  #191919;
+        }
+
+        section {
+            margin-left: -8px;
+            margin-top: 50px;
+          	display: flex;
+          	flex-wrap: nowrap;
+        }
+
+        .sound {
+            width: 0;
+            height: 0;
+            background: none;
+            border: 100px solid transparent;
+            border-right-color: #5dbcf9;
+            position: relative;
+        }
+        .sound:before {
+            content: '';
+            border-left: 100px solid #5dbcf9;
+            border-top: 50px solid #5dbcf9;
+            border-radius: 10px;
+            position: absolute;
+            left: -25px;
+            top: -25px;
+        }
+
+        .waves {
+            position: relative;
+            width: 100px;
+            overflow: hidden;
+            margin-left: 25px;
+        }
+        .waves div {
+            border: 10px solid #5dbcf9;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .big {
+            height: 200px;
+            width: 200px;
+            top: 0;
+            left: -100px;
+        }
+        .medium {
+            height: 150px;
+            width: 150px;
+            top: 25px;
+            left: -75px;
+        }
+        .small {
+            height: 100px;
+            width: 100px;
+            top: 50px;
+            left: -50px;
+        }
+
+
+
+        </style>
+</head>
+<body>
+<section>
+    <div class="sound"></div>
+
+    <div class="waves">
+        <div class="big"></div>
+        <div class="medium"></div>
+        <div class="small"></div>
+
+    </div>
+</section>
+</body>
+</html>
