@@ -22,13 +22,15 @@ a {
     font-weight: 700;
     color: #23424a;
     background-color: #38cfd9;
-    padding: 0.8em 1.2rem;
-    margin: 1em 0;
-    border-radius: 1rem;
+    padding: 0.8em 2rem;
+    /* margin: 1em 0; */
+    border-radius: 100rem;
     display: inline-block;
+    text-transform: uppercase;
 }
 
-a.btn:hover {
+a.btn:hover,
+.btn:focus {
     background-color: #136c72;
     color: #38cfd9;
 }
@@ -50,4 +52,8 @@ a.btn:hover {
 
 .hero__text {
     margin-right: 30%;
+}
+
+.hero p {
+    margin-bottom: 2em;
 }
