@@ -1,8 +1,20 @@
 *, *:before, *:after {    box-sizing: border-box;  }
 
+:root {
+    --clr-main-light: #38cfd9;
+    --clr-main-medium: #136c72;
+    --clr-main-dark: #23424a;
+
+    --clr-accent-medium: #87629a;
+
+    --clr-neutral-dark: #3a3a3a;
+    --clr-neutral-white: #fff;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', Helvetica, sans-serif;
+    color: var(--clr-neutral-dark);
 }
 
 p {
@@ -13,6 +25,10 @@ h1 {
     font-size: 3rem;
     font-weight: 900;
 }
+h2 {
+    font-weight: 900;
+    font-size: 2.25rem;
+}
 
 a {
     text-decoration: none;
@@ -20,8 +36,8 @@ a {
 
 .btn {
     font-weight: 700;
-    color: #23424a;
-    background-color: #38cfd9;
+    color: var(--clr-main-dark);
+    background-color: var(--clr-main-light);
     padding: 0.8em 2rem;
     /* margin: 1em 0; */
     border-radius: 100rem;
@@ -31,15 +47,27 @@ a {
 
 a.btn:hover,
 .btn:focus {
-    background-color: #136c72;
-    color: #38cfd9;
+    background-color: var(--clr-main-medium);
+    color: var(--clr-main-light);
 }
 
-
+.main-dark {
+    background-color: var(--clr-main-dark);
+    color: var(--clr-neutral-white);
+}
+.accent-light {
+    background-color: var(--clr-neutral-white);
+    color: var(--clr-neutral-dark);
+}
+.accent-light h2 {
+    color: var(--clr-accent-medium);
+}
+.main-medium {
+    background-color: var(--clr-main-medium);
+    color: var(--clr-neutral-white);
+}
 
 .hero {
-    background-color: #23424a;
-    color: #fff;
     padding: 0;
     margin: 0;
 }
@@ -49,6 +77,27 @@ a.btn:hover,
     width: 80%;
     max-width: 750px;
 }
+
+.row {
+    display: flex; /*.row is now a flex container */
+    flex-direction: row; /* row is default */
+    gap: 1rem;
+}
+.col {
+    /* these are now flex items, children of the flex container */
+    /* flex items are trying to shrink down as much as possible */
+    /* therefore, if you have an empty flex item, it's width will become 0 */
+    /* flex items will overflow if it has shrunk each item as much as possible and still won't fit */
+    /* background: pink; */
+    width: 100%;
+    text-align: center;
+    /* margin: 0.5rem; */
+    /* you can force flex items to be equal in width by... */
+    /* 1. setting the width to 100%, so they're all competing for the same amount of space */
+}
+/* .col + .col {
+    margin-left: 1rem;
+} */
 
 .hero__text {
     margin-right: 30%;
