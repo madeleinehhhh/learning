@@ -18,16 +18,16 @@ body {
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: min(6rem, 8vw);
     font-weight: 900;
 }
 h2 {
-    font-weight: 900;
-    font-size: 2.25rem;
+    font-weight: 700;
+    font-size: min(3rem, 4vw);
 }
 
 a {
@@ -67,6 +67,11 @@ a.btn:hover,
     color: var(--clr-neutral-white);
 }
 
+.text-center {
+    text-align: center;
+
+}
+
 .hero {
     padding: 0;
     margin: 0;
@@ -83,6 +88,7 @@ a.btn:hover,
     flex-direction: row; /* row is default */
     gap: 1rem;
 }
+
 .col {
     /* these are now flex items, children of the flex container */
     /* flex items are trying to shrink down as much as possible */
@@ -90,7 +96,6 @@ a.btn:hover,
     /* flex items will overflow if it has shrunk each item as much as possible and still won't fit */
     /* background: pink; */
     width: 100%;
-    text-align: center;
     /* margin: 0.5rem; */
     /* you can force flex items to be equal in width by... */
     /* 1. setting the width to 100%, so they're all competing for the same amount of space */
