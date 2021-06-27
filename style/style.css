@@ -1,114 +1,123 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-body,
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
+*, *:before, *:after {    box-sizing: border-box;  }
 
 :root {
-    --clr-primary-600: #ccd2e9;
-    --clr-primary-500: #7fa2af;
-    --clr-primary-200: #20333c;
-  
-    --clr-accent-500: #725c13;
-  
-    --clr-neutral-900: #f7f4ee;
-    --clr-neutral-000: #192107;
-  
-    --ff-primary: Arial, Verdana, Helvetica, sans-serif;
-    --ff-accent: serif;
-  }
-  
-  body {
-    font-family: var(--ff-primary);
-    font-weight: 400;
-    font-size: 1.3125rem;
-    line-height: 1.6;
-  }
-  
-  h1 {
-    font-size: 2em;
-    font-weight: bolder;
-  }
-  h2 {
-    font-size: 1.5em;
-    font-weight: bolder;
-  }
-  h3 {
-    font-size: 1.17em;
-    font-weight: bolder;
-  }
-  h1,
-  h2,
-  h3 {
-    color: var(--clr-accent-500);
-    font-family: var(--ff-accent);
+    --clr-main-light: #38cfd9;
+    --clr-main-medium: #136c72;
+    --clr-main-dark: #23424a;
+
+    --clr-accent-medium: #87629a;
+
+    --clr-neutral-dark: #3a3a3a;
+    --clr-neutral-white: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    color: var(--clr-neutral-dark);
+}
+
+p {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
     font-weight: 900;
-    line-height: 1;
-    margin-bottom: 1em;
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-  }
-  
-  .text-center {
+}
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    font-weight: 700;
+    color: var(--clr-main-dark);
+    background-color: var(--clr-main-light);
+    padding: 0.8em 2rem;
+    /* margin: 1em 0; */
+    border-radius: 100rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+a.btn:hover,
+.btn:focus {
+    background-color: var(--clr-main-medium);
+    color: var(--clr-main-light);
+}
+
+.main-dark {
+    background-color: var(--clr-main-dark);
+    color: var(--clr-neutral-white);
+}
+.accent-light {
+    background-color: var(--clr-neutral-white);
+    color: var(--clr-neutral-dark);
+}
+.accent-light h2 {
+    color: var(--clr-accent-medium);
+}
+.main-medium {
+    background-color: var(--clr-main-medium);
+    color: var(--clr-neutral-white);
+}
+
+.text-center {
     text-align: center;
-  }
-  
-  header,
-  section {
-    padding: 3rem 0;
-  }
-  @media (min-width: 40em) {
-    header,
-    section {
-      padding: 7rem 0;
-    }
-  }
-  .container {
-    margin-inline: auto;
-    width: min(90vw, 70.5rem);
-  }
-  .split {
-    display: flex;
-    flex-direction: column;
-  }
-  @media (min-width: 40em) {
-    .split {
-      flex-direction: row;
-    }
-    .split > * {
-      flex-basis: 100%;
-    }
-    .split > * + * {
-      margin-left: 2em;
-    }
-  }
-  .container--narrow {
-    max-width: 32rem;
-  }
-  
-  .bg-light {
-    background-color: var(--clr-primary-600);
-  }
-  .bg-primary {
-    background-color: var(--clr-primary-200);
-    color: var(--clr-neutral-900);
-  }
-  .bg-dark {
-    background-color: var(--clr-neutral-000);
-    color: var(--clr-neutral-900);
-  }
-  .bg-primary h2,
-  .bg-dark h2 {
-    color: var(--clr-primary-500);
-  }
-  
+
+}
+
+.hero {
+    padding: 0;
+    margin: 0;
+}
+.container{
+    margin: 0 auto;
+    padding: 5vh 0;
+    width: 80%;
+    max-width: 750px;
+}
+
+.dflex {
+    display: flex; /*.row is now a flex container */
+    flex-direction: row; /* row is default */
+    gap: 1rem;
+}
+
+.col {
+    /* these are now flex items, children of the flex container */
+    /* flex items are trying to shrink down as much as possible */
+    /* therefore, if you have an empty flex item, it's width will become 0 */
+    /* flex items will overflow if it has shrunk each item as much as possible and still won't fit */
+    /* background: pink; */
+    width: 100%;
+    /* margin: 0.5rem; */
+    /* you can force flex items to be equal in width by... */
+    /* 1. setting the width to 100%, so they're all competing for the same amount of space */
+}
+/* .col + .col {
+    margin-left: 1rem;t
+} */
+
+
+
+.hero__text {
+    width: 60rem;
+}
+
+.hero__img {
+    width: 100%;
+}
+
+.hero p {
+    margin-bottom: 2em;
+}
